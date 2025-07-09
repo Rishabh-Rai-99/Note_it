@@ -8,19 +8,18 @@
 ## 🚀 Features
 
 - 🆕 Create new notes with ease
-- 📌 Pin/Unpin important notes
-- ⭐ View all pinned notes on the **Important** page
+- 📌 Pin/Unpin notes
+- ⭐ View all important notes on the **Important** page
 - 🗃️ Archive and unarchive notes to declutter
 - 🗑️ Move notes to trash and restore or permanently delete them
 - 💾 LocalStorage support – your notes persist across browser sessions
-- 🌙 Optional: Light/Dark mode toggle
 
 ---
 
 ## 🧭 Pages / Routes
 
 - **Home** – Create and view all your notes
-- **Important** – View pinned notes
+- **Important** – View Important Marked Notes
 - **Archive** – Access archived notes
 - **Trash** – View and manage deleted notes
 
@@ -39,8 +38,8 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/note-it.git
-cd note-it
+git clone https://github.com/Rishabh-Rai-99/Note_it.git
+cd Note_it
 ```
 
 2. Install dependencies:
@@ -58,7 +57,7 @@ npm start
 ## 📂 Folder Structure
 
 ```
-note-it/
+Note_it/
 ├── public/
 ├── src/
 │   ├── components/
@@ -73,32 +72,10 @@ note-it/
 
 ---
 
-## 📸 Screenshots
-
-> Add UI screenshots here for:
-> - Home page
-> - Important (Pinned) page
-> - Archive page
-> - Trash page
-
----
-
-## 🙌 Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 📬 Connect with Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/your-profile)
-- 📁 [Portfolio](https://your-portfolio-link.com)
-- 🐙 [GitHub](https://github.com/your-username)
+- 💼 [LinkedIn](https://www.linkedin.com/in/rishabhrai996633/)
+- 🐙 [GitHub](https://github.com/Rishabh-Rai-99)
 
 ---
