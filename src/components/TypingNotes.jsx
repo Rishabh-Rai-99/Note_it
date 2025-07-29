@@ -22,7 +22,7 @@ const TypingNotes = () => {
           key={i}
           initial={shouldAnimate?{ y: 100, opacity: 0, rotate: 0 }:false}
           animate={{ y: 0, opacity: 1, rotate: 0 }}
-          transition={{ delay: i * 0.2, type: "spring", stiffness: 100 }}
+          transition={{ delay: i * 0.3, type: "spring", stiffness: 100 }}
           className="text-[20vh] font-bold"
         >
           {char}
