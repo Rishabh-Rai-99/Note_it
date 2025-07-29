@@ -35,6 +35,8 @@ const hasAnimated = useContext(AnimationContext);
   bg-[linear-gradient(135deg,rgba(4,120,87,0.9)_0%,rgba(2,78,64)_100%)]
   sm:bg-[linear-gradient(135deg,rgba(16,185,129,0.1)_0%,rgba(5,150,105,0.05)_100%)]
   dark:bg-[linear-gradient(135deg,rgba(16,185,129,0.4)_0%,rgba(5,150,105,0.9)_100%)]
+  backdrop-blur-md
+  sm:backdrop-blur-none
   dark:backdrop-blur-lg
   
   flex flex-col p-3 rounded-xl

@@ -16,14 +16,14 @@ const TypingNotes = () => {
   const letters = "Notes".split("");
 
   return (
-    <div className="absolute top-[60%] left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 flex">
+    <div className="absolute top-[50vh] sm:top-[60%] left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 flex">
       {letters.map((char, i) => (
         <motion.span
           key={i}
           initial={shouldAnimate?{ y: 100, opacity: 0, rotate: 0 }:false}
           animate={{ y: 0, opacity: 1, rotate: 0 }}
           transition={{ delay: i * 0.3, type: "spring", stiffness: 100 }}
-          className="text-[20vh] font-bold"
+          className="text-[10vh] sm:text-[20vh] font-bold"
         >
           {char}
         </motion.span>
