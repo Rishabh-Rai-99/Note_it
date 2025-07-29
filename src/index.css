@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+::selection{
+    color:#40d2a4;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+*{
+     font-family: "Outfit", 'sans-serif';
+     letter-spacing: 1px
+}
+
+.dark .gradient-card {
+  background: linear-gradient(135deg, rgb(16 185 129) 0%, rgba(5, 150, 105) 100%)
+}
+.filled-icon {
+  font-variation-settings: 'FILL' 1;
+}
 @import "tailwindcss";
