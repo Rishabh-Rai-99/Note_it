@@ -30,7 +30,7 @@ const hasAnimated = useContext(AnimationContext);
     
     className={` 
   ${menuActive ? 'left-0' : '-left-[100vw]'} 
-  sm:left-0 transition-all z-50 w-full sm:w-80 absolute sm:relative min-h-100vh sm:min-h-[91vh]
+  sm:left-0 transition-all z-50 w-full sm:w-80 absolute sm:relative min-h-100vh sm:min-h-[91vh] sm:max-h-[91vh]
   
   bg-[linear-gradient(135deg,rgba(4,120,87,0.9)_0%,rgba(2,78,64)_100%)]
   sm:bg-[linear-gradient(135deg,rgba(16,185,129,0.1)_0%,rgba(5,150,105,0.05)_100%)]

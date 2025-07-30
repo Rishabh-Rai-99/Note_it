@@ -40,7 +40,7 @@ const AddNotesForm = () => {
     initial={shouldAnimate?{ y: -200, opacity: 0 }:false}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-       className='shadow-xl w-full mx-2 sm:mx-14 mt-10 rounded-xl p-3 flex flex-col bg-white dark:bg-[#2a2a2a] 
+       className='shadow-xl w-full mx-2 sm:mx-15 z-20 mt-10 rounded-xl p-3 flex flex-col bg-white dark:bg-[#2a2a2a] 
 dark:text-[#e5e5e5]'>
         <input type="text" value={state.title} onChange={(e)=>handleTitleChange(e)} placeholder='Enter Title...' className='placeholder-[#9ca3af] dark:placeholder:text-[#a3a3a3] text-xl sm:text-2xl font-bold outline-none rounded-lg px-3 py-1 w-full'/>
         <div className='relative flex'>

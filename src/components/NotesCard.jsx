@@ -54,7 +54,7 @@ const NotesCard = ({
 dark:text-[#f5f5f5]
 dark:border-[#3a3a3a]
 hover:dark:shadow-lg hover:dark:shadow-black/40
- shadow-lg p-5 cursor-pointer z-40 max-h-80 min-h-50 w-full sm:w-64 mt-10 rounded-xl text-[#1f2937]  flex flex-col gap-1 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+ shadow-lg p-5 cursor-pointer z-40 max-h-80 min-h-50 w-full sm:w-64 mt-5 rounded-xl text-[#1f2937]  flex flex-col gap-1 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       <div className="flex  justify-between mb-2">
         <div className="overflow-y-auto font-bold text-xl max-h-40">{title}</div>
         {isArchived || isDeletePermanent || isImportant ? null : (

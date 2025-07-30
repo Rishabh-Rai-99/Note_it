@@ -8,18 +8,16 @@ import { delay, motion } from "framer-motion";
 import { useContext, useEffect } from "react";
 import { AnimationContext } from "../context/animationContext";
 
-
 const container = {
   hidden: {},
   show: {
     transition: {
-      delayChildren: 0.6,       // delay before first child starts (1s)
-      staggerChildren: 0.2,   // bigger delay between each child
-       // ensure children animate after container
+      delayChildren: 0.1, // delay before first child starts (1s)
+      staggerChildren: 0.2, // bigger delay between each child
+      // ensure children animate after container
     },
   },
 };
-
 
 const item = {
   hidden: { y: 1000 }, // more distance to make animation visible
@@ -33,25 +31,22 @@ const item = {
   },
 };
 
-
-
-
 const Home = () => {
   const { state, menuActive, setMenuActive } = useNotes();
 
-    const hasAnimated = useContext(AnimationContext);
-      
-        const shouldAnimate = !hasAnimated.current;
-      
-        useEffect(() => {
-          hasAnimated.current = true;
-        }, []);
+  const hasAnimated = useContext(AnimationContext);
+
+  const shouldAnimate = !hasAnimated.current;
+
+  useEffect(() => {
+    hasAnimated.current = true;
+  }, []);
 
   return (
     <>
       <div className="p-5 bg-[#f7f8fa] dark:bg-[#1a1a1a] text-[#111827] dark:text-[#e5e7eb] min-h-[100vh] overflow-x-hidden">
-        <Navbar menuActive={menuActive} setMenuActive={setMenuActive}/>
-        <div className=" min-h-full flex w-full">
+        <Navbar menuActive={menuActive} setMenuActive={setMenuActive} />
+        <div className="min-h-full flex w-full">
           <Sidebar menuActive={menuActive} setMenuActive={setMenuActive} />
           <main className="w-full relative">
             {state.notes.length > 0 || state.pinnedNotes.length > 0 ? null : (
@@ -63,36 +58,46 @@ const Home = () => {
 
             {state.pinnedNotes.length > 0 && (
               <>
-                <div className="mx-3 sm:mx-10 mt-5">
-                  <h2 className="text-xl">Pinned Notes:</h2>
+                <div className="mx-3 sm:mx-15 mt-7">
+                  <h2 className="text-xl font-bold">Pinned Notes:</h2>
                   <motion.div
-variants={shouldAnimate ? container : undefined}
-  initial={shouldAnimate ? "hidden" : false}
-  animate={shouldAnimate ? "show" : false}
-                    className="flex flex-wrap justify-between gap-4 mb-5"
+                    variants={shouldAnimate ? container : undefined}
+                    initial={shouldAnimate ? "hidden" : false}
+                    animate={shouldAnimate ? "show" : false}
+                    className="mb-5 mx-4"
                   >
-                    {state.pinnedNotes.map((card) => (
-                        <NotesCard variants={shouldAnimate ? item : undefined} {...card} />
-                    ))}
+                    <div className="flex flex-wrap gap-x-5 ">
+                      {state.pinnedNotes.map((card) => (
+                        <NotesCard
+                          variants={shouldAnimate ? item : undefined}
+                          {...card}
+                        />
+                      ))}
+                    </div>
                   </motion.div>
                 </div>
               </>
             )}
 
-            <div className="mx-3 sm:mx-10 mt-5">
+            <div className="mx-3 sm:mx-15 mt-5 w-full">
               {state.pinnedNotes.length > 0 && (
-                <h2 className="text-xl">Other Notes:</h2>
+                <h2 className="text-xl font-bold">Other Notes:</h2>
               )}
-                <motion.div
-                  variants={shouldAnimate ? container : undefined}
-  initial={shouldAnimate ? "hidden" : false}
-  animate={shouldAnimate ? "show" : false}
-                    className="flex flex-wrap justify-between gap-4 mb-5"
-                  >
-                    {state.notes.map((card) => (
-                        <NotesCard variants={shouldAnimate ? item : undefined} {...card} />
-                    ))}
-                  </motion.div>
+              <motion.div
+                variants={shouldAnimate ? container : undefined}
+                initial={shouldAnimate ? "hidden" : false}
+                animate={shouldAnimate ? "show" : false}
+                className="mb-5 mx-4"
+              >
+                <div className="flex flex-wrap gap-x-5">
+                  {state.notes.map((card) => (
+                    <NotesCard
+                      variants={shouldAnimate ? item : undefined}
+                      {...card}
+                    />
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </main>
         </div>
