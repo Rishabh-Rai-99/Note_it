@@ -1,4 +1,3 @@
-
 # 📝 Note-it
 
 **Note-it** is a feature-rich note-taking web app that lets you create, pin, archive, and delete notes — all while storing your data locally. Whether it's jotting down ideas or managing tasks, Note-it makes it easy to stay organized.
@@ -75,7 +74,7 @@ Note_it/
 
 ## 📬 Connect with Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/rishabhrai996633/)
+- 💼 [LinkedIn]()
 - 🐙 [GitHub](https://github.com/Rishabh-Rai-99)
 
 ---
